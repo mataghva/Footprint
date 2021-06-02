@@ -13,3 +13,16 @@
  *= require_tree .
  *= require_self
  */
+
+ #api {
+     margin-top: 200px;
+     font-size: 80pt;
+     text-align: center;
+     vertical-align: middle;
+     font-family: 'Dancing Script', cursive;
+
+ }
+
+ body {
+     background-color: darkseagreen;
+ }

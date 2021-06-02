@@ -10,7 +10,7 @@ class Root extends React.Component {
     render() {
 
 
-        retrun (
+        return (
 
             <h2>Footprint</h2>
         )
