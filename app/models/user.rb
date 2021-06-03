@@ -13,7 +13,7 @@
 #  updated_at      :datetime         not null
 #
 class User < ApplicationRecord
-    validates :user_name, :last_name, presence: true
+    validates :first_name, :last_name, presence: true
     validates :email, presence: true, uniqueness: true
     validates :password_digest, presence: true
     validates :password, length: {minimum: 6, allow_nil: true}
@@ -41,7 +41,7 @@ class User < ApplicationRecord
     end
 
     def ensure_session_token
-        self.session_token =|| SecureRandom::urlsafe_base64(16) 
+        self.session_token ||= SecureRandom::urlsafe_base64(16) 
     end
 
     def reset_session_token!
