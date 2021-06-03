@@ -12,7 +12,7 @@ class Root extends React.Component {
 
         return (
 
-            <h2>Footprint</h2>
+            <h2>Footprint in react</h2>
         )
     }
 
