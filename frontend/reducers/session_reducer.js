@@ -4,7 +4,7 @@ import {
 } from '../actions/session_actions';
 
 const _nullSession = {
-    currentUser: null
+    currentUserId: null
 };
 
 

@@ -1,21 +1,16 @@
 import React from 'react';
+import { Provider } from 'react-redux';
+import { HashRouter } from 'react-router-dom';
 
+import App from './app';
 
+const Root = ({ store }) => (
+    <Provider store={ store }>
+        <HashRouter>
+            <App />
+        </HashRouter>
+    </Provider>
 
-
-
-class Root extends React.Component {
-
-
-    render() {
-
-
-        return (
-
-            <h2>Footprint in react</h2>
-        )
-    }
-
-};
+);
 
 export default Root;

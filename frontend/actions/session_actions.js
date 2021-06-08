@@ -1,4 +1,4 @@
-import * as  SessionAPIUtil from '../util/session_api_util'
+import * as  SessionAPIUtil from '../utils/session_api_util'
 
 // fetchUsers()
 // signup(user)
@@ -37,17 +37,18 @@ export const fetchUsers = () => dispatch => {
 
 export const signup = (formUser) => dispatch => {
     return SessionAPIUtil.signup(formUser)
-        .then((user) => (dispatch(receiveCurrentUser(user))),
-        err => (dispatch(receiveErrors(err.responseJSON))))
+        .then((user) => (dispatch(receiveCurrentUser(user))))
+        .fail(errors => (dispatch(receiveErrors(errors.responseJSON))));
 };
 
 export const login = (formUser) => dispatch => {
     return SessionAPIUtil.login(formUser)
-        .then((user) => (dispatch(receiveCurrentUser(user))),
-        err => (dispatch(receiveErrors(err.responseJSON))))
+        .then((user) => (dispatch(receiveCurrentUser(user))))
+        .fail(errors => (dispatch(receiveErrors(errors.responseJSON))));
 };
 
 export const logout = () => dispatch => {
     return SessionAPIUtil.logout()
-        .then(() => dispatch(logoutCurrentUser()))
+        .then(() => (dispatch(logoutCurrentUser())))
+        .fail(errors => (dispatch(receiveErrors(errors.responseJSON))));
 };

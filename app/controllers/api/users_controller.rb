@@ -8,9 +8,10 @@ class Api::UsersController < ApplicationController
     def create
         @user = User.new(user_params)
         if @user.save
+            login(@user)
             render :show
         else
-            flash.now[:errors] = @user.errors.full_messages
+            render json: @user.errors.full_messages, status: 401
         end
     end
 
@@ -18,14 +19,16 @@ class Api::UsersController < ApplicationController
         @user = User.find_by(id: params[:id])
         if @user && @user.update(user_params)
             render :show
+        elsif !@user
+            render json: ['Could not locate user'], status: 400
         else
-            flash.now[:errors] = ["Something went wrong!"]
+            render json: @user.errors.full_messages, status: 401
         end
     end
 
     private
 
     def user_params
-        params.require(:user).permit(:firs_name, :last_name, :email, :password)
+        params.require(:user).permit(:first_name, :last_name, :email, :password)
     end
 end

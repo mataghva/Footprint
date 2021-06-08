@@ -10,6 +10,8 @@
  * files in this directory. Styles in this file should be added after the last require_* statement.
  * It is generally better to create a new file per style scope.
  *
+ *= require reset
+ *= require nav_bar
  *= require_tree .
  *= require_self
  */
@@ -26,4 +28,9 @@
  body {
      background-color: darkseagreen;
      /* background-color: #428A13; */
+ }
+
+ @font-face {
+     font-family: Metropolis ExtraBold;
+     src: url(/assets/stylesheets/fonts/Metropolis/Metropolis-ExtraBold.otf);
  }

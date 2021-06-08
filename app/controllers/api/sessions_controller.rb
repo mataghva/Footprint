@@ -1,15 +1,17 @@
 class Api::SessionsController < ApplicationController
 
     def create
-        @user = User.find_by_credentials(email, password)
+        @user = User.find_by_credentials(params[:user][:email], params[:user][:password])
         if @user
-            longin(@user)
+            login(@user)
+            render 'api/users/show'
         else
-            flash.now[:errors] = ["Invalid email or password"]
+            render json: ["Invalid email or password"], status: 401
         end
     end
 
     def destroy
-        log_out
+        logout
+        render json: { message: 'Logout Successful.' }
     end
 end
