@@ -6,12 +6,15 @@ import LogInContainer from './session/login_container';
 import { AuthRoute, ProtectedRoute }  from '../utils/route_utils';
 
 const App = () => (
-
     <div>
         <Route path="/" component={NavBarContainer} />
-        <AuthRoute exact path="/signup" component={SignUpContainer} />
-        <AuthRoute exact path="/login" component={LogInContainer} />
-        <Redirect from="*" to="/"/>
+        <div>
+            <Switch>
+                <AuthRoute exact path="/signup" component={SignUpContainer} />
+                <AuthRoute exact path="/login" component={LogInContainer} />
+                <Redirect to="/"/>
+            </Switch>
+        </div>
     </div>
 );
 

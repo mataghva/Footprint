@@ -12,7 +12,6 @@ class SessionForm extends React.Component {
             password: ""
             
         }
-        console.log(this.props)
         this.handleInput = this.handleInput.bind(this);
         this.handleSubmit = this.handleSubmit.bind(this);
         this.renderNames = this.renderNames.bind(this);
@@ -35,7 +34,7 @@ class SessionForm extends React.Component {
     
     handleDemo(e) {
         e.preventDefault();
-        this.props.formAction({
+        this.props.login({
             email: "demo@footprint.com",
             password: "guestuser"
         });
@@ -81,23 +80,15 @@ class SessionForm extends React.Component {
             case "Sign Up":
                 return (
                     <div className="session_form_navlink">
-                        <span>Already have an account?  </span>
-                        <Link className="session_form_link" to='/login'>Log In</Link>
+                        <span className="session_form_link_text">Already have an account?</span>
+                        <Link className="session_form_link" to='/login'> Log In</Link>
                     </div>
                 );
             case "Log In":
                 return (
                     <div className="session_form_navlink">
-                        <div>
-                            <span id="session_form_link_text">Don't have an account?    </span>
-                            <Link className="session_form_link" to='/signup'>Sign Up</Link>
-                            <br />
-                            <br />
-                        </div>
-                        <div>
-                            <span>Explore website as a guest user:  </span>
-                            <button className='demo_btn' onClick={this.handleDemo}>Demo</button>
-                        </div>
+                        <span className="session_form_link_text">Don't have an account?    </span>
+                        <Link className="session_form_link" to='/signup'>Sign Up</Link>
                     </div>
                 );
         };
@@ -135,6 +126,10 @@ class SessionForm extends React.Component {
                             className="session_form_submit"/>
                 </form>
                 <this.renderBottomLinks/>
+                <div className="session_form_navlink">
+                    <span>Explore website as a guest user:  </span>
+                    <button className='demo_btn' onClick={this.handleDemo}>Demo</button>
+                </div>
             </div>
         )
     }

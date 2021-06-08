@@ -58,6 +58,3 @@ export const logout = () => dispatch => {
         .fail(errors => (dispatch(receiveErrors(errors.responseJSON))));
 };
 
-// export const removeErrors = () => dispatch => {
-//     return 
-// }
