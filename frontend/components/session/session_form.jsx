@@ -10,7 +10,9 @@ class SessionForm extends React.Component {
             lastName: "",
             email: "",
             password: ""
+            
         }
+        console.log(this.props)
         this.handleInput = this.handleInput.bind(this);
         this.handleSubmit = this.handleSubmit.bind(this);
         this.renderNames = this.renderNames.bind(this);
@@ -18,9 +20,11 @@ class SessionForm extends React.Component {
         this.handleDemo = this.handleDemo.bind(this);
     }
 
-    handleSubmit(e) {
+    
+    handleSubmit (e) {
         e.preventDefault();
-        this.props.formAction(this.state)
+        this.props.formAction(this.state);
+      
     }
     
     handleInput(field) {
@@ -36,6 +40,10 @@ class SessionForm extends React.Component {
             password: "guestuser"
         });
     };
+
+    componentWillUnmount() {
+        this.props.clearErrors()
+    }
     
 
     renderNames() {
