@@ -69,7 +69,7 @@ input:-internal-autofill-selected {
 
 .session_form_navlink {
     font-family: Arial, Helvetica, sans-serif;
-    font-size: 16px;
+    font-size: 14px;
     align-self: center;
     text-decoration: none;
 }
@@ -79,10 +79,31 @@ input:-internal-autofill-selected {
     font-family: Arial, Helvetica, sans-serif;
     font-size: 16px;
     font-weight: 700;
+    color: #428A13;
     align-self: center;
     text-decoration: none;
 }
 
+#session_form_link_text {
+    position: relative;
+    margin-left: 25px;
+    margin-bottom: 10px;
+}
+
+.demo_btn {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 16px;
+    font-weight: 700;
+    color: #428A13;
+    align-self: center;
+    background: white;
+    border: none;
+    text-decoration: none;
+}
+
+.demo_btn:hover {
+    cursor: pointer;
+}
 
 .session_form_error {
     font-family: Arial, Helvetica, sans-serif;
