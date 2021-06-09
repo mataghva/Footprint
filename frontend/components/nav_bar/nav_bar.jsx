@@ -16,8 +16,9 @@ class NavBar extends React.Component {
         return (
             currentUser ? (
                 <div>
-                    <div className='welcome_nav'>Welcome {currentUser.firstName}</div>
+                    <div className='welcome_nav' >Welcome {currentUser.firstName}</div>
                     <button className='logout_btn' onClick={logout}>Log Out</button>
+                    <img  className="user_photo" src={currentUser.photoUrl}></img>
                 </div>
             ) : (
                 <div className="session_btns">
