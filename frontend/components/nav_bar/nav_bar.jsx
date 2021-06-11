@@ -18,7 +18,7 @@ class NavBar extends React.Component {
                 <div>
                     <div className='welcome_nav' >Welcome {currentUser.firstName}</div>
                     <button className='logout_btn' onClick={logout}>Log Out</button>
-                    <img  className="user_photo" src={window.userURL} alt="Profile picture"></img>
+                    <img  className="user_photo" src="https://footprint-dev.s3.us-west-1.amazonaws.com/user.png" alt="Profile picture"></img>
                 </div>
             ) : (
                 <div className="session_btns">
