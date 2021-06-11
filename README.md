@@ -34,7 +34,7 @@ These technologies are used to develop this website:
 
 ## Future Goals
 ### Calorie Calculator
-It's handy feature to be added to website to calculate the amount of calorie that user burns walking the trails. To accomplish this, some more user information like height, weight and age is needed.
+It's a handy feature to be added to website to calculate the amount of calorie that user burns walking the trails. To accomplish this, some more user information like height, weight and age is needed.
 
 
 
