@@ -1,5 +1,6 @@
 # README
 
+![alt text](/app/assets/images/Site_Screenshot.JPG "Site Screenshot")
 Footprint is a website that users can find information about trails. It's a clone of original website alltrails.com.
 
 
