@@ -4,7 +4,6 @@ Footprint is a website that users can find information about trails. It's a clon
 
 
 ## Features
------
 Users are able to:
 * Search trails by name, parks that they are located in and location of trails on map.
 * Get information like length, elevation gain, difficulty of path and type of the trail.
@@ -16,7 +15,6 @@ Users are able to:
 
 
 ## Technologies
------
 These technologies are used to develop this website:
 * Ruby on Rails framework as backend
 * PostgreSQL as database system
@@ -27,7 +25,6 @@ These technologies are used to develop this website:
 
 
 ## User Authentication Features
------
 * All necessary controls has been made to make sure the user do not submit a signup form with:
   * Blank mandatory fields
   * Wrong format of email address
@@ -36,7 +33,6 @@ These technologies are used to develop this website:
 
 
 ## Future Goals
------
 ### Calorie Calculator
 It's handy feature to be added to website to calculate the amount of calorie that user burns walking the trails. To accomplish this, some more user information like height, weight and age is needed.
 
