@@ -97,7 +97,7 @@ class SessionForm extends React.Component {
     render() {
         return (
             <div>
-                <img className="session_image" src="https://footprint-dev.s3.us-west-1.amazonaws.com/home_image3.jpg" alt="Trail" />
+                <img className="session_image" src={window.home_image3URL} alt="Sign up background" />
                 <div className="session_container">
                     <div className="session_form_title">{this.props.title}</div>
                     <form onSubmit={this.handleSubmit} className="session_form">
