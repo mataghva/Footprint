@@ -1,6 +1,7 @@
 # README
 
-Footprint is a website that users can find information about trails. It's a clone of original website alltrails.com.
+![alt text](/app/assets/images/Site_Screenshot.JPG "Site Screenshot")
+Footprint is a website that users can find information about trails. It's a clone of original alltrails.com website.
 
 
 ## Features
@@ -32,7 +33,64 @@ These technologies are used to develop this website:
 * It has Demo User feature to login to website as a guest user to check the basic features
 
 
+## Error Message Handling
+In order to have better error messages for sign-up/log-in and review forms, separate slices of errors data in the state are created. To achieve this goal, separate reducers are created:
+
+```javascript
+import {
+    RECEIVE_SESSION_ERRORS,
+    RECEIVE_CURRENT_USER,
+    CLEAR_ERRORS
+} from '../actions/session_actions';
+
+const sessionErrorsReducer = (state = [], action) => {
+    Object.freeze(state);
+    switch (action.type) {
+        case RECEIVE_SESSION_ERRORS:
+            console.log(action.errors)
+            return action.errors;
+        case RECEIVE_CURRENT_USER:
+            return [];
+        case CLEAR_ERRORS:
+            return [];
+        default:
+            return state;
+    };
+};
+
+export default sessionErrorsReducer;
+```
+
+```javascript
+import { combineReducers } from 'redux';
+import reviewErrorsReducer from './review_errors_reducer';
+import sessionErrorsReducer from './session_errors_reducer';
+
+const errorsReducer = combineReducers({
+    session: sessionErrorsReducer,
+    review: reviewErrorsReducer
+});
+
+export default errorsReducer;
+```
+Then the errors slice of state would be like this:
+
+```javascript
+errors: {
+        session: ["Incorrect username/password combination"],
+        review: ["title cannot be blank"],
+    },
+```    
+
 ## Future Goals
+The following features hasn't been finished yet and will be added in the future:
+* Searching and showing the trails informationa and pictures
+* Searching parks and showing the trails inside each park
+* Filtering the search results by different criteria
+* Writing and editing the reviews by users
+* Rating the trails by users
+
+
 ### Calorie Calculator
 It's a handy feature to be added to website to calculate the amount of calorie that user burns walking the trails. To accomplish this, some more user information like height, weight and age is needed.
 
