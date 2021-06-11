@@ -40,7 +40,7 @@ The following features hasn't been finished yet and will be added in the future:
 * Filtering the search results by different criteria
 * Writing and editing the reviews by users
 * Rating the trails by users
-https://github.com/mataghva/Footprint/blob/trails_parks/app/assets/images/Site_Screenshot-1.jpg
+
 
 ### Calorie Calculator
 It's a handy feature to be added to website to calculate the amount of calorie that user burns walking the trails. To accomplish this, some more user information like height, weight and age is needed.
