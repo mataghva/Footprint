@@ -1,24 +1,46 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Footprint is a website that users can find information about trails. It's a clone of original website alltrails.com.
 
-Things you may want to cover:
 
-* Ruby version
+## Features
+-----
+Users are able to:
+* Search trails by name, parks that they are located in and location of trails on map.
+* Get information like length, elevation gain, difficulty of path and type of the trail.
+* See the original pictures of trails and the pictures that other users uploaded.
+* Post a review about their experience, upload picturs and rate the trail.
 
-* System dependencies
+[Footprint Live](https://footprint-1.herokuapp.com/)
 
-* Configuration
 
-* Database creation
 
-* Database initialization
+## Technologies
+-----
+These technologies are used to develop this website:
+* Ruby on Rails framework as backend
+* PostgreSQL as database system
+* AWS S3 storage to store all original and user-uploaded pictures
+* React as frontend engine
+* Redux to manage the state of frontend
+* jQuery's $.ajax() function to send frontend requests to backend
 
-* How to run the test suite
 
-* Services (job queues, cache servers, search engines, etc.)
+## User Authentication Features
+-----
+* All necessary controls has been made to make sure the user do not submit a signup form with:
+  * Blank mandatory fields
+  * Wrong format of email address
+  * Password with less than 6 characters
+* It has Demo User feature to login to website as a guest user to check the basic features
 
-* Deployment instructions
 
-* ...
+## Future Goals
+-----
+### Calorie Calculator
+It's handy feature to be added to website to calculate the amount of calorie that user burns walking the trails. To accomplish this, some more user information like height, weight and age is needed.
+
+
+
+
+
