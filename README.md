@@ -73,7 +73,14 @@ const errorsReducer = combineReducers({
 
 export default errorsReducer;
 ```
+Then the errors slice of state would be like this:
 
+```javascript
+errors: {
+        session: ["Incorrect username/password combination"],
+        review: ["title cannot be blank"],
+    },
+```    
 
 ## Future Goals
 The following features hasn't been finished yet and will be added in the future:
