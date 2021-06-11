@@ -5,7 +5,7 @@ Footprint is a website that users can find information about trails. It's a clon
 
 ## Features
 Users are able to:
-* Search trails by name, parks that they are located in and location of trails on map.
+* Search trails by name, parks that trails are located in and location of trails on map.
 * Get information like length, elevation gain, difficulty of path and type of the trail.
 * See the original pictures of trails and the pictures that other users uploaded.
 * Post a review about their experience, upload picturs and rate the trail.
