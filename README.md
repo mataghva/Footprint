@@ -1,15 +1,15 @@
 # README
 
 ![alt text](/app/assets/images/Site_Screenshot.JPG "Site Screenshot")
-Footprint is a website that users can find information about trails. It's a clone of original alltrails.com website.
+Footprint is a website that users can find information about trails. It's a clone of the original alltrails.com website.
 
 
 ## Features
-Users are able to:
-* Search trails by name, parks that trails are located in and location of trails on map.
-* Get information like length, elevation gain, difficulty of path and type of the trail.
+Users can:
+* Search trails by name, parks that trails are located in, and location of trails on the map.
+* Get information like length, elevation gain, the difficulty of path, and type of the trail.
 * See the original pictures of trails and the pictures that other users uploaded.
-* Post a review about their experience, upload picturs and rate the trail.
+* Post a review about their experience, upload pictures, and rate the trail.
 
 [Footprint Live](https://footprint-1.herokuapp.com/)
 
@@ -18,23 +18,23 @@ Users are able to:
 ## Technologies
 These technologies are used to develop this website:
 * Ruby on Rails framework as backend
-* PostgreSQL as database system
+* PostgreSQL as the database system
 * AWS S3 storage to store all original and user-uploaded pictures
 * React as frontend engine
-* Redux to manage the state of frontend
+* Redux to manage the state of the frontend
 * jQuery's $.ajax() function to send frontend requests to backend
 
 
 ## User Authentication Features
-* All necessary controls has been made to make sure the user do not submit a signup form with:
+* All necessary controls have been made to make sure the user does not submit a signup form with:
   * Blank mandatory fields
-  * Wrong format of email address
+  * Wrong format of the email address
   * Password with less than 6 characters
-* It has Demo User feature to login to website as a guest user to check the basic features
+* It has Demo User feature to log in to the website as a guest user to check the basic features
 
 
 ## Error Message Handling
-In order to have better error messages for sign-up/log-in and review forms, separate slices of errors data in the state are created. To achieve this goal, separate reducers are created:
+To have better error messages for sign-up/log-in and review forms, separate slices of error data in the state are created. To achieve this goal, separate reducers are created:
 
 ```javascript
 import {
@@ -83,8 +83,8 @@ errors: {
 ```    
 
 ## Future Goals
-The following features hasn't been finished yet and will be added in the future:
-* Searching and showing the trails informationa and pictures
+The following features haven't been finished yet and will be added in the future:
+* Searching and showing the trails information and pictures
 * Searching parks and showing the trails inside each park
 * Filtering the search results by different criteria
 * Writing and editing the reviews by users
@@ -92,7 +92,7 @@ The following features hasn't been finished yet and will be added in the future:
 
 
 ### Calorie Calculator
-It's a handy feature to be added to website to calculate the amount of calorie that user burns walking the trails. To accomplish this, some more user information like height, weight and age is needed.
+It's a handy feature to be added to the website to calculate the amount of calories that the user burns walking the trails. To accomplish this, some more user's information like height, weight, and age is needed.
 
 
 
