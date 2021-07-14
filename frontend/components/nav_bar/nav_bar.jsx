@@ -36,7 +36,7 @@ class NavBar extends React.Component {
             <div className="nav_bar">
                     <this.rightMenu/>
                     <Link className="logo_name" to="/">
-                        <img src="/assets/simple-footprint-icon-by-Vexels.png" height="40" alt="logo" />FootPrint</Link>
+                        <img className="logo-icon" src="/assets/simple-footprint-icon-by-Vexels.png" height="40" alt="logo" />FootPrint</Link>
             </div>
         )
     }
